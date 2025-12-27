@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Максим | Две собаки, две кошки</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Максим</h1>
+        <p class="tagline">
+            <span class="highlight">2 собаки</span> -
+            <span class="highlight">2 кошки</span> 
+        </p>
+    </header>
+    
+    <main>
+        <section id="about">
+            <h2><i class="fas fa-user"></i> Обо мне</h2>
+            <p>Привет! Я Максим — активный человек, который верит в гармонию между спортом, заботой о животных и помощью другим.</p>       
+        </section>
+        
+        <section id="pets">
+            <h2><i class="fas fa-paw"></i> Мои питомцы</h2>
+            <div class="pets">
+                <div class="pet-card">
+                    <i class="fas fa-dog"></i>
+                    <h3>2 собаки</h3>
+                    <p>Активные компаньоны для бега и прогулок</p>
+                    <button class="pet-details-btn" data-pet="dogs">Подробнее</button>
+                </div>
+                <div class="pet-card">
+                    <i class="fas fa-cat"></i>
+                    <h3>2 кошки</h3>
+                    <p>Создают уют дома после активного дня</p>
+                    <button class="pet-details-btn" data-pet="cats">Подробнее</button>
+                </div>
+            </div>
+        </section>
+        
+        <section id="hobbies">
+            <h2><i class="fas fa-heart"></i> Мои увлечения</h2>
+            <div class="hobbies">
+                <div class="hobby">
+                    <i class="fas fa-running"></i>
+                    <h3>Бег</h3>
+                    <p>Утренние пробежки для энергии</p>
+                    <div class="counter" id="running-counter">0</div>
+                </div>
+                <div class="hobby">
+                    <i class="fas fa-dumbbell"></i>
+                    <h3>Кроссфит</h3>
+                    <p>Силовые тренировки 3-4 раза в неделю</p>
+                    <div class="counter" id="crossfit-counter">0</div>
+                </div>
+                <div class="hobby">
+                    <i class="fas fa-moon"></i>
+                    <h3>Вечерние прогулки</h3>
+                    <p>Релакс и мысли на свежем воздухе</p>
+                    <div class="counter" id="walking-counter">0</div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="volunteer">
+            <h2><i class="fas fa-hands-helping"></i> Волонтерство</h2>
+            <p>Регулярно помогаю в приютах для животных, участвую в экологических акциях и социальных проектах.</p>
+            <div class="volunteer">
+                <p><strong>Статистика волонтерства:</strong></p>
+                <div class="volunteer-stats">
+                    <div class="stat">
+                        <span class="stat-number" id="hours">0</span>
+                        <span class="stat-label">часов помощи</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" id="projects">0</span>
+                        <span class="stat-label">проектов</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact">
+            <h2><i class="fas fa-envelope"></i> Контакты</h2>
+            <p>Хотите вместе побегать, обсудить волонтерство или просто пообщаться?</p>
+            <div class="contacts">
+                <a href="mailto:maxim@example.com" class="contact-btn">
+                    <i class="fas fa-envelope"></i> Написать
+                </a>
+                <a href="#" class="contact-btn" id="telegram-btn">
+                    <i class="fab fa-telegram"></i> Telegram
+                </a>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>© 2025 Максим</p>
+        <div class="footer-icons">
+            <i class="fas fa-dog"></i> 
+            <i class="fas fa-cat"></i> 
+            <i class="fas fa-running"></i> 
+            <i class="fas fa-hands-helping"></i>
+        </div>
+    </footer>
+
+    <!-- Модальное окно -->
+    <div id="pet-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3 id="modal-title"></h3>
+            <p id="modal-text"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
