@@ -1,0 +1,16 @@
+cat > .gitignore << 'EOF'
+# macOS системные файлы
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# VS Code временные файлы
+.vscode/*.log
+.vscode/settings.json.swp
+
+# Временные файлы
+*.tmp
+*.temp
+*.swp
+EOF

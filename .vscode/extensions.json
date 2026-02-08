@@ -1,0 +1,9 @@
+cat > .vscode/extensions.json << 'EOF'
+{
+  "recommendations": [
+    "ritwickdey.liveserver",
+    "ecmel.vscode-html-css",
+    "formulahendry.auto-renametag"
+  ]
+}
+EOF
