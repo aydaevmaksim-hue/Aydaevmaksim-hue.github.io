@@ -1,120 +1,259 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Максим | Две собаки, две кошки</title>
+    <title>Максим | Тестировщик ПО</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <h1>Максим</h1>
-        <p class="tagline">
-            <span class="highlight">2 собаки</span> -
-            <span class="highlight">2 кошки</span> 
-        </p>
-    </header>
-    
-    <main>
-        <section id="about">
-            <h2><i class="fas fa-user"></i> Обо мне</h2>
-            <p>Привет! Я Максим — активный человек, который верит в гармонию между спортом, заботой о животных и помощью другим.</p>       
-        </section>
-        
-        <section id="pets">
-            <h2><i class="fas fa-paw"></i> Мои питомцы</h2>
-            <div class="pets">
-                <div class="pet-card">
-                    <i class="fas fa-dog"></i>
-                    <h3>2 собаки</h3>
-                    <p>Активные компаньоны для бега и прогулок</p>
-                    <button class="pet-details-btn" data-pet="dogs">Подробнее</button>
-                </div>
-                <div class="pet-card">
-                    <i class="fas fa-cat"></i>
-                    <h3>2 кошки</h3>
-                    <p>Создают уют дома после активного дня</p>
-                    <button class="pet-details-btn" data-pet="cats">Подробнее</button>
-                </div>
-            </div>
-        </section>
-        
-        <section id="hobbies">
-            <h2><i class="fas fa-heart"></i> Мои увлечения</h2>
-            <div class="hobbies">
-                <div class="hobby">
-                    <i class="fas fa-running"></i>
-                    <h3>Бег</h3>
-                    <p>Утренние пробежки для энергии</p>
-                    <div class="counter" id="running-counter">0</div>
-                </div>
-                <div class="hobby">
-                    <i class="fas fa-dumbbell"></i>
-                    <h3>Кроссфит</h3>
-                    <p>Силовые тренировки 3-4 раза в неделю</p>
-                    <div class="counter" id="crossfit-counter">0</div>
-                </div>
-                <div class="hobby">
-                    <i class="fas fa-moon"></i>
-                    <h3>Вечерние прогулки</h3>
-                    <p>Релакс и мысли на свежем воздухе</p>
-                    <div class="counter" id="walking-counter">0</div>
-                </div>
-            </div>
-        </section>
-        
-        <section id="volunteer">
-            <h2><i class="fas fa-hands-helping"></i> Волонтерство</h2>
-            <p>Регулярно помогаю в приютах для животных, участвую в экологических акциях и социальных проектах.</p>
-            <div class="volunteer">
-                <p><strong>Статистика волонтерства:</strong></p>
-                <div class="volunteer-stats">
-                    <div class="stat">
-                        <span class="stat-number" id="hours">0</span>
-                        <span class="stat-label">часов помощи</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number" id="projects">0</span>
-                        <span class="stat-label">проектов</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section id="contact">
-            <h2><i class="fas fa-envelope"></i> Контакты</h2>
-            <p>Хотите вместе побегать, обсудить волонтерство или просто пообщаться?</p>
-            <div class="contacts">
-                <a href="mailto:maxim@example.com" class="contact-btn">
-                    <i class="fas fa-envelope"></i> Написать
-                </a>
-                <a href="#" class="contact-btn" id="telegram-btn">
-                    <i class="fab fa-telegram"></i> Telegram
-                </a>
-            </div>
-        </section>
-    </main>
-    
-    <footer>
-        <p>© 2025 Максим</p>
-        <div class="footer-icons">
-            <i class="fas fa-dog"></i> 
-            <i class="fas fa-cat"></i> 
-            <i class="fas fa-running"></i> 
-            <i class="fas fa-hands-helping"></i>
-        </div>
-    </footer>
 
-    <!-- Модальное окно -->
-    <div id="pet-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h3 id="modal-title"></h3>
-            <p id="modal-text"></p>
-        </div>
+<body>
+    <div class="container">
+        <!-- Хедер -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="main-title">Максим</h1>
+                <p class="subtitle">Тестировщик ПО</p>
+
+                <div class="pets-count">
+                    <div class="pet-item">
+                        <span class="pet-number">2</span>
+                        <span class="pet-label">собаки</span>
+                    </div>
+                    <div class="pet-item">
+                        <span class="pet-number">2</span>
+                        <span class="pet-label">кошки</span>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="nav-menu">
+                <a href="#about" class="nav-link">
+                    <i class="fas fa-user"></i>
+                    <span>Обо мне</span>
+                </a>
+                <a href="#hobbies" class="nav-link">
+                    <i class="fas fa-heart"></i>
+                    <span>Мои увлечения</span>
+                </a>
+                <a href="#pets" class="nav-link">
+                    <i class="fas fa-paw"></i>
+                    <span>Мои питомцы</span>
+                </a>
+                <a href="#contact" class="nav-link">
+                    <i class="fas fa-envelope"></i>
+                    <span>Контакты</span>
+                </a>
+            </nav>
+        </header>
+
+        <!-- Основной контент -->
+        <main class="main-content">
+            <!-- Обо мне -->
+            <section id="about" class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-user-circle"></i>
+                    Давайте знакомиться
+                </h2>
+                <div class="section-content">
+                    <p class="intro-text">
+                        Занимаюсь тестированием программ и обожаю активный отдых и животных. На работе нужно быть
+                        внимательным к деталям, а в свободное время стараюсь найти баланс между спортом, питомцами и
+                        волонтерством.
+                    </p>
+
+                    <div class="highlight-card">
+                        <h3>Что меня характеризует:</h3>
+                        <ul class="features-list">
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                Тестировщик с более чем трехлетним опытом работы в сфере профессионального тестирования.
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                Владелец 2 собак и 2 кошек
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                Активный спортсмен (бег, кроссфит)
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                Волонтер в приютах для животных
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Мои увлечения -->
+            <section id="hobbies" class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-heart"></i>
+                    Мои увлечения
+                </h2>
+                <div class="hobbies-grid">
+                    <div class="hobby-card">
+                        <div class="hobby-icon">
+                            <i class="fas fa-running"></i>
+                        </div>
+                        <h3>Бег</h3>
+                        <p>Утренние и вечерные пробежки для поддержания тонуса и ясности ума</p>
+                    </div>
+
+                    <div class="hobby-card">
+                        <div class="hobby-icon">
+                            <i class="fas fa-dumbbell"></i>
+                        </div>
+                        <h3>Кроссфит</h3>
+                        <p>Силовые тренировки 3-4 раза в неделю для физической формы</p>
+                    </div>
+
+                    <div class="hobby-card">
+                        <div class="hobby-icon">
+                            <i class="fas fa-moon"></i>
+                        </div>
+                        <h3>Прогулки</h3>
+                        <p>Релакс и планирование на свежем воздухе с питомцами</p>
+                    </div>
+
+                    <div class="hobby-card">
+                        <div class="hobby-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>Тестирование ПО</h3>
+                        <p>Профессиональная деятельность и постоянное обучение</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Мои питомцы -->
+            <section id="pets" class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-paw"></i>
+                    Мои питомцы
+                </h2>
+                <div class="pets-grid">
+                    <div class="pet-card">
+                        <div class="pet-header">
+                            <i class="fas fa-dog pet-icon dog-icon"></i>
+                            <h3>2 собаки</h3>
+                        </div>
+                        <p class="pet-description">
+                            <strong>Рей</strong> (3 года,) и <strong>Астра</strong> (16 лет,).
+                            Активные компаньоны для пробежек и долгих прогулок в парке.
+                        </p>
+                        <div class="pet-features">
+                            <span class="pet-tag">Любят активность</span>
+                            <span class="pet-tag">Верные друзья</span>
+                        </div>
+                    </div>
+
+                    <div class="pet-card">
+                        <div class="pet-header">
+                            <i class="fas fa-cat pet-icon cat-icon"></i>
+                            <h3>2 кошки</h3>
+                        </div>
+                        <p class="pet-description">
+                            <strong>Поля</strong> (5 лет) и <strong>Симба</strong> (2 года).
+                            Создают уют дома, любят наблюдать за птицами и исследовать пространство.
+                        </p>
+                        <div class="pet-features">
+                            <span class="pet-tag">Домашний уют</span>
+                            <span class="pet-tag">Игривые</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Волонтерство -->
+            <section id="volunteer" class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-hands-helping"></i>
+                    Волонтерство
+                </h2>
+                <div class="volunteer-content">
+                    <div class="volunteer-text">
+                        <p>
+                            Я часто помогаю приютам для животных, участвуя в волонтерских акциях.
+                            Еще я занимаюсь экологическими проектами и социальными делами.
+                            Это помогает сделать природу чище и общество более ответственным.
+                        </p>
+                        <div class="volunteer-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">120+</span>
+                                <span class="stat-label">часов помощи</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">8</span>
+                                <span class="stat-label">проектов</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Контакты -->
+            <section id="contact" class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-envelope"></i>
+                    Контакты
+                </h2>
+                <div class="contact-content">
+                    <p class="contact-text">
+                        Хотите обсудить тестирование ПО, вместе побегать или пообщаться о волонтерстве?
+                    </p>
+
+                    <div class="contacts-grid">
+                        <a href="mailto:aydaevmaksim@gmail.com" class="contact-card email-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-info">
+                                <h3>Email</h3>
+                                <p>aydaevmaksim@gmail.com</p>
+                            </div>
+                            <div class="contact-action">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </a>
+
+                        <a href="https://t.me/Maxim_1_9_9_5" target="_blank" class="contact-card telegram-card">
+                            <div class="contact-icon">
+                                <i class="fab fa-telegram"></i>
+                            </div>
+                            <div class="contact-info">
+                                <h3>Telegram</h3>
+                                <p>@Maxim_1_9_9_5</p>
+                            </div>
+                            <div class="contact-action">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Футер -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p class="copyright">© 2025 Максим | Тестировщик ПО & Любитель животных</p>
+                <div class="footer-icons">
+                    <i class="fas fa-dog"></i>
+                    <i class="fas fa-cat"></i>
+                    <i class="fas fa-laptop-code"></i>
+                    <i class="fas fa-running"></i>
+                    <i class="fas fa-heart"></i>
+                </div>
+            </div>
+        </footer>
     </div>
 
     <script src="script.js"></script>
 </body>
+
 </html>
